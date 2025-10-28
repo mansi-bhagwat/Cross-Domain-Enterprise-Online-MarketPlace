@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;  /* Prevent horizontal overflow */
+}
+
+/* Header Styling */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Space between left and right content */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;  /* Ensure it spans the full width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Links in header */
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Container styling for the product section */
+.products {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap if necessary */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px;
+  padding: 20px;
+  max-height: 500px;
+  overflow-y: auto;  /* Enable vertical scrolling if needed */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Individual product card styling */
+.product {
+  width: 250px;
+  height: 350px; /* Fixed height for the product card */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; /* Ensure no content spills outside */
+  position: relative;
+}
+
+/* Card hover effect */
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image container */
+.product-image {
+  width: 100%; /* Full width of the product card */
+  height: 180px; /* Fixed height for the image section */
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the image height matches the container */
+  object-fit: cover; /* Crop the image proportionally */
+  display: block; /* Remove extra spacing below the image */
+}
+
+/* Product title */
+.product h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+/* Product description */
+.product p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 15px 15px;
+  line-height: 1.5;
+}
+
+/* Product button styling */
+.product .button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007BFF;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    color: #333;
+    text-align: center;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 16px;
+}
+
+.social-icon {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #0056b3;
+}
+
+.footer-details {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer-details .email a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-details .email a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-nav ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+}
+
